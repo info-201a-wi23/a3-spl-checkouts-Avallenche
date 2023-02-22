@@ -22,7 +22,11 @@ These will likely be calculated using your DPLYR skills, answering questions suc
 
 Feel free to calculate and report values that you find relevant.
 
+<<<<<<< HEAD
 From the calculation I did, I find that "So You Want to Talk about Race (Unabridged)" is the digital book with the most monthly checkout amount(4903), and the book "Headphones / Seattle Public Library." is the physical book with the most monthly checkout amount(2115). Also, in 2017, the book with the most monthly checkout amount(988) is "In Building Device Checkout". Besides that, my favorite album 24K Magic has a highest checkout number at the year 2017. Last but not least, I find a increase trend of digital material checkout numbers over the checkout year, but in the year 2023, the number has a sudden decrease which might due to the data include checkouts only for the first two month of the year.
+=======
+From the calculation I did, I find that "So You Want to Talk about Race (Unabridged)" is the digital book with the most monthly checkout amount(4903), and the book "Headphones / Seattle Public Library." is the physical book with the most monthly checkout amount(2115). Also, in 2017, the book with the most monthly checkout amount(988) is "In Building Device Checkout". Besides that, my favorite album 24K Magic has a highest checkout number at the year 2017. Last but not least, I find a increase trend of Ebooks checkout number over the checkout year until the year 2020, but in the year 2023, the number has a sudden decrease which might due to the data include checkouts only for the first two month of the year.
+>>>>>>> f2afe2726a70b07dfa780d25b9b2b7f9baba6532
 
 ### The Dataset
 
@@ -56,10 +60,17 @@ Here's an example of how to run an R script inside an RMarkdown file:
 
 #### Observations:
 
+<<<<<<< HEAD
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("chart1.R")}
 ```
 
 This chart is aimed to check whether there is a increasing trend of the Ebooks checkout number in the dataset. The real condition seems to be a little bit different from what I thought, it is true that there is a increase from 2017 to 2020, but there is a slight decrease from 2020 to 2022, and a sudden decrease at 2023. This might due to the record is stopped at Feb 2023.
+=======
+```{r,echo = FALSE, warning = FALSE, code = readLines("chart1.R")}
+```
+
+This chart is aimed to check the statement of a increasing trend of the Ebooks checkout number in the dataset. The real condition seems to be a little bit different from what I have guessed, it is true that there is a increase from 2017 to 2020, but there is a slight decrease from 2020 to 2022, and a sudden decrease at 2023. This might due to the record is stopped at Feb 2023.
+>>>>>>> f2afe2726a70b07dfa780d25b9b2b7f9baba6532
 
 ### Second Trends Over Time Chart
 
@@ -80,7 +91,11 @@ Here's an example of how to run an R script inside an RMarkdown file:
 
 #### Observations:
 
+<<<<<<< HEAD
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("chart2.R")}
+=======
+```{r, echo = FALSE, code = readLines("chart2.R")}
+>>>>>>> f2afe2726a70b07dfa780d25b9b2b7f9baba6532
 ```
 
 This chart is aimed to understand what kind of class people would like to checkout in the first month to see the trend of people choosing between physical or digital. The result would be suprising that people are more willing to choose physical version compared with digital version only exclude the year of 2021 and 2023.
@@ -97,7 +112,11 @@ Here's an example of how to run an R script inside an RMarkdown file:
 
 #### Observations: 
 
+<<<<<<< HEAD
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("chart3.R")}
+=======
+```{r, echo = FALSE, code = readLines("chart3.R")}
+>>>>>>> f2afe2726a70b07dfa780d25b9b2b7f9baba6532
 ```
 
 This chart is aimed to see which type of material is welcomed by the customers to checkout in the Jan od 2023, the result is books, Ebooks, and audiobooks. This is interesting since in the year of 2023 people still seems are more comfortable reading or listening to something that is a paper book or something that is closest to the form of book.
