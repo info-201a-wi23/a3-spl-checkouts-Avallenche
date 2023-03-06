@@ -8,7 +8,7 @@ jan_over30_checkouts <- ck_data %>%
   filter(Checkouts >= 30)
 
 ggplot(jan_over30_checkouts) +
-  geom_point(aes(x = CheckoutYear, 
+  geom_line(aes(x = CheckoutYear, 
                  y = Checkouts,
                  color = UsageClass)) +
   facet_wrap(~UsageClass) +

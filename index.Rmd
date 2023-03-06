@@ -5,60 +5,22 @@ output: html_document
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
-
-The data is recording different reading materials with different usage type like physical or digital. The trend I would like to analyze is the checkouts trend of digital, specifically Ebooks, to see in a modern days the portion of how many people choose to read electronic version materials.
+The data is recording different reading materials with different usage type like physical or digital. The trend I would like to analyze is the checkouts trend of digital, specifically Ebooks. The reason for choosing this topic is I want to see when we entering the period of internet and smart devices, how people selecting between the normal physical copies of books or they are more welling to follow the time trend, that is, more likely to pick the electronic version of reading materials online. From this data set, I will be likely find put the trends of how people selecting their form of reading materials as the world is developing.
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("summary.R")}
+```
 
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
-
-Feel free to calculate and report values that you find relevant.
-
-<<<<<<< HEAD
-From the calculation I did, I find that "So You Want to Talk about Race (Unabridged)" is the digital book with the most monthly checkout amount(4903), and the book "Headphones / Seattle Public Library." is the physical book with the most monthly checkout amount(2115). Also, in 2017, the book with the most monthly checkout amount(988) is "In Building Device Checkout". Besides that, my favorite album 24K Magic has a highest checkout number at the year 2017. Last but not least, I find a increase trend of digital material checkout numbers over the checkout year, but in the year 2023, the number has a sudden decrease which might due to the data include checkouts only for the first two month of the year.
-=======
-From the calculation I did, I find that "So You Want to Talk about Race (Unabridged)" is the digital book with the most monthly checkout amount(4903), and the book "Headphones / Seattle Public Library." is the physical book with the most monthly checkout amount(2115). Also, in 2017, the book with the most monthly checkout amount(988) is "In Building Device Checkout". Besides that, my favorite album 24K Magic has a highest checkout number at the year 2017. Last but not least, I find a increase trend of Ebooks checkout number over the checkout year until the year 2020, but in the year 2023, the number has a sudden decrease which might due to the data include checkouts only for the first two month of the year.
->>>>>>> f2afe2726a70b07dfa780d25b9b2b7f9baba6532
+From the calculation I did, I find that "`r max_digital_checkout`" is the digital book with the most monthly checkout amount(4903), and the book "`r max_physical_checkout`" is the physical book with the most monthly checkout amount(2115). Also, in 2017, the book with the most monthly checkout amount(988) is "`r max_2017_checkout`". Besides that, my favorite album "24K Magic" has a highest checkout number at the year `r max_24k_year`. Last but not least, I find a increase trend of Ebooks checkout number over the checkout year until the year 2020, but in the year 2023, the number has a sudden decrease which might due to the data include checkouts only for the first two month of the year.
 
 ### The Dataset
-
-- Who collected/published the data?  
-- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
-- What are possible limitations or problems with this data?   (at least 200 words)
 
 The data was collected by Seattle Public Library, the parameters in this dataset include Usage Class, Checkout Type, Material Type, Checkout Year, Checkout Month, Checkouts, Title, ISBN, Creator, Subjects, Publisher, Publication Year. The digital checkout data is from various media vendors, the physical data is from The Legrady artwork data archives. The data was collected for checking the trends of checkouts of different book in different sources like physical and digital. The ethical question that might be facing is what the book's audiences is. When dealing with this, we need to be patient and reflecting the result using words that do not hurt their feelings.
 
 The possible limitations with this data is there are many missing values that might be important when finding the trends that we needed. The missing value might form a false trend when we analyzing the data. Also the format of some variables are not the same, this cause a problem when we try to analyze the data that include the associated "untidy" data. We might need some time find a best way to clean up the data set before we start finding data visualization. Last but not least, we need to focus the category of the book, the physical and digital have different patterns and we need to be aware of what the observations belong to.
 
 ### First Trends Over Time Chart
-
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-#### Observations:
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("chart1.R")}
 ```
@@ -67,41 +29,14 @@ This chart is aimed to check whether there is a increasing trend of the Ebooks c
 
 ### Second Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-#### Observations:
-
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("chart2.R")}
 ```
 
-This chart is aimed to understand what kind of class people would like to checkout in the first month to see the trend of people choosing between physical or digital. The result would be suprising that people are more willing to choose physical version compared with digital version only exclude the year of 2021 and 2023.
+This chart is aimed to understand what kind of class people would like to checkout in the first month to see the trend of people choosing between physical or digital. The result would be surprising that people are more willing to choose physical version compared with digital version only exclude the year of 2021 and 2023. The reason might because of the rent of online book. Compared with an online version, the physical version material only cost once and you will own it permanently. But a digital ones might be lost and forget the pathway to it when people store it on their electronic devices. For the year of 2021, it might due to the pandemic that people cannot get outside to purchase a physical version book. That is why the amount of digital books checkouts more than the physical ones in the year of 2021.
 
 ### Your Choice
-
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-#### Observations: 
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE, code = readLines("chart3.R")}
 ```
 
-This chart is aimed to see which type of material is welcomed by the customers to checkout in the Jan od 2023, the result is books, Ebooks, and audiobooks. This is interesting since in the year of 2023 people still seems are more comfortable reading or listening to something that is a paper book or something that is closest to the form of book.
+This chart is aimed to see which type of material is welcomed by the customers to checkout in the Jan of 2023, the result is books, E-books, and audio books. This is interesting since in the year of 2023 people still seems are more comfortable reading or listening to something that is a paper book or something that is closest to the form of book. This might because people are still have the largest possibility getting access to these form of reading materials, or to say, other forms are less well-known or harder to become prevalent in the society. Things like video disc and sound disc, they are out of time but still aged and old-fashioned people are more likely to keep them and still checking out them from the store. 
